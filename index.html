@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gracia Lwanzo Kasongo | Academic & Legal Portfolio</title>
+  
+  <!-- Typography & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* ==========================================================================
+       ELEGANT & MODERN DESIGN SYSTEM
+       ========================================================================== */
+    :root {
+      --bg-body: #FAF8F5;
+      --bg-card: #FFFFFF;
+      --bg-accent: #F2ECE4;
+      --text-main: #0B1320;
+      --text-muted: #5A6578;
+      --accent-terracotta: #C85A32;
+      --accent-terracotta-hover: #A84420;
+      --accent-navy: #0F233A;
+      --accent-gold: #D4AF37;
+      --border-color: #E2DACF;
+      --shadow-sm: 0 4px 12px rgba(11, 19, 32, 0.03);
+      --shadow-md: 0 12px 32px rgba(11, 19, 32, 0.06);
+      --shadow-lg: 0 20px 40px rgba(11, 19, 32, 0.09);
+      
+      --font-serif: 'Cormorant Garamond', serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Container Wrapper */
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ==========================================================================
+       NAVIGATION & HEADER
+       ========================================================================== */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(250, 248, 245, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 1000;
+      padding: 1.25rem 0;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--accent-navy);
+    }
+
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--accent-navy);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .logo-text {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent-terracotta);
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 2.2rem;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    .nav-menu a:hover {
+      color: var(--accent-terracotta);
+    }
+
+    /* ==========================================================================
+       HERO SECTION
+       ========================================================================== */
+    .hero {
+      padding: 5rem 0 4rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-accent);
+      color: var(--accent-terracotta);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border-color);
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: 3.8rem;
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--accent-navy);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--accent-terracotta);
+      font-weight: 500;
+    }
+
+    .hero-description {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      max-width: 540px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      background: var(--accent-navy);
+      color: #fff;
+      padding: 0.95rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      transition: all 0.25 ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-terracotta);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      color: var(--accent-navy);
+      padding: 0.95rem 1.8rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent-navy);
+      background: #fff;
+    }
+
+    /* Profile Photo Frame */
+    .hero-image-wrapper {
+      position: relative;
+    }
+
+    .hero-image-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 6px solid #fff;
+      background: #fff;
+    }
+
+    .hero-image-card img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-image-backdrop {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 100%;
+      height: 100%;
+      background: var(--bg-accent);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      z-index: -1;
+    }
+
+    .badge-float {
+      position: absolute;
+      bottom: -24px;
+      left: -24px;
+      background: #fff;
+      padding: 1.25rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: 260px;
+    }
+
+    .badge-float i {
+      font-size: 1.8rem;
+      color: var(--accent-terracotta);
+    }
+
+    .badge-float p {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--accent-navy);
+      line-height: 1.3;
+    }
+
+    /* ==========================================================================
+       HIGHLIGHT CARDS & GRID
+       ========================================================================== */
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-header {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-terracotta);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: var(--accent-navy);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 12px;
+      padding: 2.25rem;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-terracotta);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: var(--bg-accent);
+      color: var(--accent-terracotta);
+      display: grid;
+      place-items: center;
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-title {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--accent-navy);
+      margin-bottom: 1.25rem;
+    }
+
+    .card-list {
+      list-style: none;
+    }
+
+    .card-list li {
+      margin-bottom: 1rem;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .card-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--accent-terracotta);
+    }
+
+    .card-list li strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       PUBLICATIONS & RESEARCH (TABBED HUB)
+       ========================================================================== */
+    .tab-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 3rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .tab-header {
+      display: flex;
+      gap: 1rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      padding: 0.6rem 1.25rem;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-radius: 30px;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn.active, .tab-btn:hover {
+      background: var(--accent-navy);
+      color: #fff;
+    }
+
+    .pub-item {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border-color);
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 1.5rem;
+      align-items: baseline;
+    }
+
+    .pub-item:last-child {
+      border-bottom: none;
+    }
+
+    .pub-year {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent-terracotta);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .pub-title {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--accent-navy);
+      margin-bottom: 0.3rem;
+    }
+
+    .pub-authors {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* ==========================================================================
+       QUOTE BANNER & FOOTER
+       ========================================================================== */
+    .quote-section {
+      background: var(--accent-navy);
+      color: #fff;
+      padding: 4.5rem 0;
+      text-align: center;
+      border-radius: 20px;
+      margin: 3rem 0;
+    }
+
+    .quote-text {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-style: italic;
+      max-width: 780px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.3;
+    }
+
+    .quote-author {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+    }
+
+    footer {
+      background: #fff;
+      border-top: 1px solid var(--border-color);
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-about h3 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--accent-navy);
+      margin-bottom: 1rem;
+    }
+
+    .footer-about p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 400px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent-navy);
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-col p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .pub-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <div class="logo-mark">G</div>
+        <div class="logo-text">
+          Gracia Lwanzo Kasongo
+          <span>Political Science & Art Law</span>
+        </div>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#conferences">Conferences</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <i class="fa-solid fa-graduation-cap"></i> UCLouvain PhD Researcher
+          </div>
+          <h1 class="hero-title">
+            Understand Power.<br><em>Influence Change.</em><br>Lead the Future.
+          </h1>
+          <p class="hero-description">
+            Researcher in Political Science and International Relations at the Catholic University of Louvain (UCLouvain). Specializing in post-colonial cultural heritage restitution, international law, and legal feminism.
+          </p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn-primary">Get in Touch</a>
+            <a href="#research" class="btn-secondary">View Publications</a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <div class="hero-image-backdrop"></div>
+          <div class="hero-image-card">
+            <!-- Embedded Portrait Photo -->
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATDA8WCxERDA8XDA4NDxAEEhITEhJTEBgXFxcYFx4bGhobGh4iIiIiICAgICAgICAgICD/2wBDABAMDBAEEhAUERAUICAQICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICD/wAARCAEgASADASIAAhEBAxEB/8QAGwABAAMBAQEBAAAAAAAAAAAAAAECAwQFBgf/xAAYEAEBAQEBAAAAAAAAAAAAAAAAAQIDBP/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEOpacity: 1;" alt="Gracia Lwanzo Kasongo" />
+          </div>
+          <div class="badge-float">
+            <i class="fa-solid fa-quote-left"></i>
+            <p>Be Informed.<br>Be Responsible.<br><strong>Be a Leader.</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise & Qualification Cards -->
+    <section class="section" id="expertise">
+      <div class="section-header">
+        <div class="section-subtitle">Academic Profile</div>
+        <h2 class="section-title">Education & Career Highlights</h2>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-university"></i></div>
+          <h3 class="card-title">Academic Degrees</h3>
+          <ul class="card-list">
+            <li><strong>2020–2025:</strong> PhD in Political Science & IR, UCLouvain, Belgium</li>
+            <li><strong>2019–2020:</strong> Master's in Int. Humanitarian Action, UCLouvain</li>
+            <li><strong>2017–2018:</strong> Bachelor’s (Bac +5) in Public International Law, UNIGOM</li>
+            <li><strong>2014–2015:</strong> Graduation Degree (Bac +3) in Public Law, UNIGOM</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <h3 class="card-title">Professional Experience</h3>
+          <ul class="card-list">
+            <li><strong>2025:</strong> Guest Speaker & Expert at the Belgian Senate</li>
+            <li><strong>2021–2026:</strong> PhD Researcher at UCLouvain, Belgium</li>
+            <li><strong>Since 2016:</strong> Legal Advisor, ASBL "KIVU TERRA NOVA"</li>
+            <li><strong>2016–2018:</strong> Legal Expert, American Bar Association (ABA) DRC</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-award"></i></div>
+          <h3 class="card-title">Honors & Grants</h3>
+          <ul class="card-list">
+            <li><strong>2024–2026:</strong> Grant Francoise-Marie Peermans Fund, Royal Academy of Belgium</li>
+            <li><strong>2023–2025:</strong> UCLouvain Int. Cooperation Doctoral Scholarship</li>
+            <li><strong>2017:</strong> Regional Int. Humanitarian Law Moot Court Winner</li>
+            <li><strong>2015:</strong> Gold Medal, Excellence in Eloquence Competition</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research & Publications Hub -->
+    <section class="section" id="research">
+      <div class="section-header">
+        <div class="section-subtitle">Scholarship</div>
+        <h2 class="section-title">Scientific Publications</h2>
+      </div>
+
+      <div class="tab-container">
+        <div class="tab-header">
+          <button class="tab-btn active" onclick="filterTabs('all', event)">All Works</button>
+          <button class="tab-btn" onclick="filterTabs('books', event)">Books & Chapters</button>
+          <button class="tab-btn" onclick="filterTabs('journals', event)">Journal Articles</button>
+        </div>
+
+        <div id="pub-hub">
+          <div class="pub-item" data-category="books">
+            <div class="pub-year">2026 In Press</div>
+            <div>
+              <div class="pub-title">(In)visibility of Black Body in Francophone Media Space: Afropean Aesthetics in Theater, Dance and Politics</div>
+              <div class="pub-authors">Lwanzo Kasongo, G. & Dr. A. Stevellia Moussavou Nyama. Springer Book Series: Gender, Justice, and Legal Feminism.</div>
+            </div>
+          </div>
+
+          <div class="pub-item" data-category="journals">
+            <div class="pub-year">2025</div>
+            <div>
+              <div class="pub-title">A General Introduction to Art Law in Democratic Republic of Congo</div>
+              <div class="pub-authors">Lwanzo Kasongo, G. Art Law Review, Lexology.</div>
+            </div>
+          </div>
+
+          <div class="pub-item" data-category="books">
+            <div class="pub-year">2025</div>
+            <div>
+              <div class="pub-title">Building an Afropolitanism: Reimagining Congolese Cultural Heritage in Contemporary Architecture and Art</div>
+              <div class="pub-authors">Kasongo, G.L., Joel, B.A. Advances in Science, Technology & Innovation. Springer, Cham.</div>
+            </div>
+          </div>
+
+          <div class="pub-item" data-category="journals">
+            <div class="pub-year">2024</div>
+            <div>
+              <div class="pub-title">Unraveling the Complexity of Human Remains Restitution in the Democratic Republic of Congo</div>
+              <div class="pub-authors">Lwanzo Kasongo, G. OpinioJuris.</div>
+            </div>
+          </div>
+
+          <div class="pub-item" data-category="journals">
+            <div class="pub-year">2023</div>
+            <div>
+              <div class="pub-title">Le Refus de s'excuser : Une Nouvelle Forme de Violence Coloniale Belgo-Congolaise ?</div>
+              <div class="pub-authors">Lwanzo Kasongo, G. Permanences Critiques, pp. 63-72.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conferences & Symposia -->
+    <section class="section" id="conferences">
+      <div class="section-header">
+        <div class="section-subtitle">Keynote Speaking</div>
+        <h2 class="section-title">International Conferences</h2>
+      </div>
+
+      <div class="tab-container">
+        <div class="pub-item">
+          <div class="pub-year">2025 • Brussels</div>
+          <div>
+            <div class="pub-title">Freeing Minds, Healing Memories: Restitution as an Act of Reparation for Transgenerational Memory</div>
+            <div class="pub-authors">Guest Expert Speaker at the Belgian Senate, Brussels, Belgium.</div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2026 • Basel</div>
+          <div>
+            <div class="pub-title">Panel Co-Convenor: Restitution, Sovereignty and Geostrategic Realignments</div>
+            <div class="pub-authors">The VAD Conference, Basel, Switzerland.</div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2024 • Cambridge</div>
+          <div>
+            <div class="pub-title">Navigating the Complexities of Cultural Heritage Restitution: A Post-Colonial Perspective</div>
+            <div class="pub-authors">Cambridge Heritage Research Centre (CHRC), University of Cambridge, UK.</div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2023 • New York</div>
+          <div>
+            <div class="pub-title">From Stalemate to Progress: Navigating the Restitution Maze in Belgium and DR Congo</div>
+            <div class="pub-authors">International Conference on Museum Heritage Conservation, New York, USA.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Banner -->
+    <div class="quote-section">
+      <div class="quote-text">
+        "The future belongs to those who understand it today."
+      </div>
+      <div class="quote-author">— Be the Change</div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3>Gracia Lwanzo Kasongo</h3>
+          <p>PhD Researcher in Political Science & International Relations at UCLouvain, Belgium. Specializing in cultural property, art law, and decolonial narrative reconstruction.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Location</h4>
+          <p><i class="fa-solid fa-location-dot"></i> UCLouvain, Belgium</p>
+          <p><i class="fa-solid fa-building"></i> ISPOLE Research Institute</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Information</h4>
+          <p><i class="fa-solid fa-envelope"></i> gracia.lwanzo@uclouvain.be</p>
+          <p><i class="fa-solid fa-envelope"></i> gracialwanzo200@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i> +32 487 69 11 97</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Gracia Lwanzo Kasongo. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function filterTabs(category, evt) {
+      const btns = document.querySelectorAll('.tab-btn');
+      btns.forEach(b => b.classList.remove('active'));
+      evt.target.classList.add('active');
+
+      const items = document.querySelectorAll('#pub-hub .pub-item');
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = 'grid';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
